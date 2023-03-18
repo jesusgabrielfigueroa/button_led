@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+h1{
+    color: rgb(0, 247, 255);
+    border: 4px solid rgb(0, 247, 255);
+    font-size: 5em;
+    letter-spacing: 7px;
+    font-weight: lighter;
+    display: inline-block;
+    padding: 2px 20px;
+    transition: 0.5s;
+    position: relative;
+    animation: star 3s infinite linear;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+.luz{
+    width: 250px;
+    height: 15px;
+    background-color: rgb(0, 247, 255);
+    position: relative;
+    top: 200%;
+    left: 0;
+    box-shadow: 0 0 20px rgb(0, 247, 255);
+    filter: blur(40px);
+    animation: luz 3s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes star{
+    0%{transform: rotate(-8deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0.7); text-shadow: 0 0 20px rgb(0, 247, 255, 0.5);color: rgb(0, 247, 255);
+        border: 4px solid rgb(0, 247, 255);}
+    3%{transform: rotate(8deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0.7); text-shadow: 0 0 20px rgb(0, 247, 255, 0.5); color: rgb(0, 247, 255);
+        border: 4px solid rgb(0, 247, 255);}
+    6%{transform: rotate(-5deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0.7); text-shadow: 0 0 20px rgb(0, 247, 255, 0.5); color: rgb(0, 247, 255);
+        border: 4px solid rgb(0, 247, 255);}
+    10%{transform: rotate(0deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0.7); text-shadow: 0 0 20px rgb(0, 247, 255, 0.5); color: rgb(0, 247, 255);
+        border: 4px solid rgb(0, 247, 255);}
+    80%{transform: rotate(0deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0.7); text-shadow: 0 0 20px rgb(0, 247, 255, 0.5); color: rgb(0, 247, 255);
+        border: 4px solid rgb(0, 247, 255);}
+    90%{transform: rotate(0deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0); text-shadow: 0 0 20px rgb(0, 247, 255, 0); color: #333;
+        border: 4px solid #333;}
+    100%{transform: rotate(0deg); box-shadow: 0 0px 20px rgb(0, 247, 255, 0); text-shadow: 0 0 20px rgb(0, 247, 255, 0); color: #333;
+        border: 4px solid #333;}
+
+}
+
+@keyframes luz{
+    0%{opacity: 1; transform: rotate(8deg);}
+    3%{opacity: 1; transform: rotate(-8deg);}
+    6%{opacity: 1; transform: rotate(5deg);}
+    10%{opacity: 1; transform: rotate(0deg);}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
